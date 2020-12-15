@@ -18,7 +18,6 @@ function Login(props) {
       setUserSession(response.headers['authorization']);
       props.history.push('/home');
     }).catch(error => {
-			debugger;
       setLoading(false);
       if (error.response.status !== 200) setError(error.response.data);
     });
